@@ -65,6 +65,14 @@ public abstract class BaseEntity implements Serializable {
         updatedAt = LocalDateTime.now();
     }
 
+    /**
+     * Soft delete: marks the entity as deleted without removing it from the database.
+     * Subclasses may override to set additional flags (e.g. isActive = false).
+     */
+    public void softDelete() {
+        this.isDeleted = true;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

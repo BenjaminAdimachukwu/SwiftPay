@@ -82,7 +82,7 @@ public interface TransactionRepository  extends JpaRepository<Transaction, UUID>
     Page<Transaction> findByAccountId(@Param("accountId") UUID accountId, Pageable pageable);
 
 
-    /** here
+    /**
      * Find transactions by status.
      *
      * @param status Transaction status

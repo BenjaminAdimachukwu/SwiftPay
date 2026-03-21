@@ -113,11 +113,6 @@ public class Account extends BaseEntity {
     @Column(name = "last_transaction_date")
     private LocalDateTime lastTransactionDate;
 
-    @Column(name = "is_deleted", nullable = false)
-    @Builder.Default
-    private Boolean isDeleted = false;
-
-
     @NotNull(message = "Customer is required")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "customer_id", nullable = false, foreignKey = @ForeignKey(name = "fk_account_customer"))
