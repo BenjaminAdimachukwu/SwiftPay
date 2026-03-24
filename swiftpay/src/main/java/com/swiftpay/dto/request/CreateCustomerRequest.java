@@ -32,13 +32,13 @@ public class CreateCustomerRequest {
     @Size(min = 2, max = 50, message = "Last name must be 2-50 characters")
     private String lastName;
 
-    @NotBlank(message = "Password is required")
-    @Size(min = 8, max = 100, message = "Password must be 8-100 characters")
-    @Pattern(
-            regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$",
-            message = "Password must contain: number, lowercase, uppercase, special char"
-    )
-    private String password;
+//    @NotBlank(message = "Password is required")
+//    @Size(min = 8, max = 100, message = "Password must be 8-100 characters")
+//    @Pattern(
+//            regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$",
+//            message = "Password must contain: number, lowercase, uppercase, special char"
+//    )
+//    private String password;
 
     @NotBlank(message = "Phone number is required")
     @Pattern(

@@ -46,8 +46,11 @@ public class Customer  extends BaseEntity {
     @Column(name = "email", nullable = false, unique = true, length = 100)
     private String email;
 
-    @NotBlank(message = "Password is required")
-    @Column(name = "password_hash", nullable = false, length = 255)
+//    @NotBlank(message = "Password is required")
+//    @Column(name = "password_hash", nullable = false, length = 255)
+//    private String passwordHash;
+
+    @Column(nullable = true)  // ✅ Allow null
     private String passwordHash;
 
     @Pattern(regexp = "^\\+?[1-9]\\d{1,14}$", message = "Invalid phone number format")
